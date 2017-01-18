@@ -1,0 +1,11 @@
+{block content}
+    {if $user->isLoggedIn()}
+        <h2>{$user->getIdentity()->getName()}</h2>
+        <p>Vítej!</p>
+        <p><a n:href="logout!">Odhlásit</a></p>
+    {else}
+        <h2>Nepřihlášen :(</h2>
+    {/if}
+
+    <p><a n:href=":register">Registrovat</a></p>
+{/block}
